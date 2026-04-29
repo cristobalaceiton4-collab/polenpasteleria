@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo - Polen Pasteleria</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(0, 146, 165);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .inicio {
+            text-align: center;
+            padding: 40px 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- TÍTULO ELEGANTE --- */
+        .inicio h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 42px; /* Celular */
+            line-height: 1.1;
+        }
+
+        @media (min-width: 768px) {
+            .inicio h1 { font-size: 80px; } /* PC */
+        }
+
+        /* --- CONTENEDOR DE BOTONES --- */
+        .contenedor-botones {
+            display: flex;
+            flex-direction: column; /* Apilados en celular para mejor alcance */
+            width: 100%;
+            max-width: 350px; /* Ancho cómodo en celular */
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .contenedor-botones {
+                flex-direction: row; /* En línea para PC */
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 1100px;
+            }
+        }
+
+        /* --- BOTONES GRANDES --- */
+        .btn-base {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 18px 20px; /* Más altos para celular */
+            font-size: 18px; /* Texto más legible en móvil */
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 12px; /* Menos redondeados, más modernos */
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 768px) {
+            .btn-base {
+                padding: 22px 40px;
+                font-size: 20px;
+                min-width: 280px;
+                border-radius: 50px; /* Volvemos a cápsula en PC */
+            }
+        }
+
+        .btn-base:hover {
+            background-color: white;
+            color: rgb(0, 95, 107);
+            transform: scale(1.03);
+        }
+
+        /* Botón Instagram */
+        .btn-agenda {
+            background-color: rgba(255, 255, 255, 0.1); /* Sutil fondo para diferenciarlo */
+            font-weight: 600;
+        }
+
+        .btn-agenda svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+
+        .btn-agenda:hover svg {
+            fill: rgb(0, 95, 107);
+        }
+
+        /* --- FOOTER INFO --- */
+        .info-footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item strong {
+            display: block;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .info-item p {
+            margin: 5px 0;
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+        @media (min-width: 768px) {
+            .info-footer {
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inicio">
+        <h1>Polen <br> Pastelería</h1>
+
+        <div class="contenedor-botones">
+            <a href="#" class="btn-base">ver kuchenes</a>
+            <a href="#" class="btn-base">ver sandwichs</a>
+            <a href="#" class="btn-base">ver bebestibles</a>
+            <a href="#" class="btn-base">ver cafes</a>
+            <a href="#" class="btn-base">ver bolleria</a>
+            
+            <a href="TU_LINK_INSTAGRAM" class="btn-base btn-agenda">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.298c-.04-.851-.174-1.433-.372-1.943a3.9 3.9 0 0 0-.923-1.416A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.445.01 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.23.048.778.036 1.2.166 1.482.276.374.145.64.318.92.598.28.28.453.546.598.92.11.281.24.703.276 1.482.038.839.049 1.093.049 3.23s-.01 2.39-.049 3.23c-.036.778-.166 1.2-.276 1.482a1.9 1.9 0 0 1-.598.92 1.9 1.9 0 0 1-.92.598c-.281.11-.703.24-1.482.276-.839.038-1.093.049-3.23.049s-2.39-.01-3.23-.049c-.778-.036-1.2-.166-1.482-.276a1.9 1.9 0 0 1-.92-.598 1.9 1.9 0 0 1-.598-.92c-.11-.281-.24-.703-.276-1.482-.038-.839-.049-1.093-.049-3.23s.01-2.39.049-3.23c.036-.778.166-1.2.276-1.482.145-.374.318-.64.598-.92.28-.28.546-.453.92-.598.282-.11.704-.24 1.482-.276.838-.038 1.093-.049 3.23-.049z"/>
+                    <path d="M8 3.86a4.14 4.14 0 1 0 0 8.28 4.14 4.14 0 0 0 0-8.28zm0 6.84a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/>
+                    <path d="M12.31 3.691a.992.992 0 1 1-1.984 0 .992.992 0 0 1 1.984 0z"/>
+                </svg>
+                agenda al dm
+            </a>
+        </div>
+    </div>
+
+    <footer class="info-footer">
+        <div class="info-item">
+            <strong>Ubicación</strong>
+            <p>Claro Solar 345</p>
+        </div>
+        <div class="info-item">
+            <strong>Horario de atención</strong>
+            <p>Lunes a Viernes: 8:30 a 19:00</p>
+            <p>Sábado y Domingo: Cerrado</p>
+        </div>
+    </footer>
+</body>
+</html>
